@@ -1,0 +1,19 @@
+﻿<Window x:Class="Bussines.SolutionDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sirett="clr-namespace:SiretT.Controls"
+        Title="Solition" MaxWidth="336" SizeToContent="WidthAndHeight" ResizeMode="NoResize" ShowInTaskbar="False">
+    <Grid>
+        <StackPanel Margin="5">
+            <Label>Costo</Label>
+            <sirett:NumberBox x:Name="cost"/>
+            <Label>Solución</Label>
+            <TextBox x:Name="solu" Height="60" SpellCheck.IsEnabled="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                <DatePicker x:Name="dateP" Margin="5" Visibility="Collapsed"/>
+                <Button Padding="8,4" Margin="5" IsDefault="True" Click="Ok_Click">Aceptar</Button>
+                <Button Padding="8,4" Margin="5" IsCancel="True">Cancelar</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

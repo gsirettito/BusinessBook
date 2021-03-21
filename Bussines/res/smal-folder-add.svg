@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+  <g id="main">
+    <clipPath id="clip_mask">
+      <path d="M6,11.5c0,-3.0327,2.4673,-5.5,5.5,-5.5c1.8588,0,3.5039,0.9278,4.5,2.3436V0H0v16h8.3436C6.9278,15.0039,6,13.3588,6,11.5z"/>
+    </clipPath>
+    <g id="icon" clip-path="url(#clip_mask)">
+      <path d="M0,4h14.9963l0.0033,8.9996c0.0002,0.5524,-0.4476,1.0004,-1,1.0004H1c-0.5523,0,-1,-0.4477,-1,-1L0,4z" fill-rule="evenodd" fill="#E9B664"/>
+      <path d="M15,3H0V1C0,0.4477,0.4477,0,1,0h4.2745c0.4243,0,0.8313,0.1686,1.1314,0.4686l1.0628,1.0627C7.7687,1.8314,8.1757,2,8.6,2h5.4C14.5523,2,15,2.4477,15,3L15,3z" fill-rule="evenodd" fill="#96762C"/>
+    </g>
+    <g id="overlay">
+      <path d="M11.5,7c-2.4853,0,-4.5,2.0147,-4.5,4.5c0,2.4853,2.0147,4.5,4.5,4.5s4.5,-2.0147,4.5,-4.5C16,9.0147,13.9853,7,11.5,7zM14,12h-2v2h-1v-2H9v-1h2V9h1v2h2V12z" fill-rule="evenodd" fill="#4EA17E"/>
+      <polygon points="14,11 12,11 12,9 11,9 11,11 9,11 9,12 11,12 11,14 12,14 12,12 14,12" fill-rule="evenodd" fill="#FFFFFF" stroke-linejoin="miter"/>
+    </g>
+  </g>
+</svg>

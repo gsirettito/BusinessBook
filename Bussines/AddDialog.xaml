@@ -1,0 +1,21 @@
+﻿<Window x:Class="Bussines.AddDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Add" MaxWidth="336" SizeToContent="WidthAndHeight" ResizeMode="NoResize" ShowInTaskbar="False">
+    <Grid>
+        <StackPanel Margin="5">
+            <Label>Equipo</Label>
+            <ComboBox x:Name="equip" IsEditable="True"></ComboBox>
+            <Label>Lo trajo</Label>
+            <ComboBox x:Name="prop" IsEditable="True"></ComboBox>
+            <Label>Problema</Label>
+            <TextBox x:Name="prob" Height="60" SpellCheck.IsEnabled="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                <DatePicker x:Name="dateP" Margin="5" Visibility="Collapsed" SelectedDate="{x:Static sys:DateTime.Now}"/>
+                <Button Padding="8,4" Margin="5" IsDefault="True" Click="Ok_Click">Aceptar</Button>
+                <Button Padding="8,4" Margin="5" IsCancel="True">Cancelar</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

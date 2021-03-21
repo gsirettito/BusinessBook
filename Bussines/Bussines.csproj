@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0057E21-D9DC-4DCE-8D30-12E46B6BE8C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bussines</RootNamespace>
+    <AssemblyName>Bussines</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx">
+      <HintPath>..\..\Fluent\Fluent\bin\Debug\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Fluent">
+      <HintPath>..\..\Fluent\Fluent\bin\Debug\Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Fluent\Fluent\bin\Debug\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Converters\IconConverter.cs" />
+    <Compile Include="Converters\StaticConverters.cs" />
+    <Compile Include="FilterColumnHeaderButtonAction.cs" />
+    <Compile Include="Converters\IsSelectedAllListViewConverter.cs" />
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\LogicToVisibilityConverter.cs" />
+    <Compile Include="DeleteDialog.xaml.cs">
+      <DependentUpon>DeleteDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\EqualsToFalseConverter.cs" />
+    <Compile Include="ListBoxSelector.cs" />
+    <Compile Include="ListViewColumnSort.cs" />
+    <Compile Include="NumberBox.cs" />
+    <Compile Include="NumericBox.cs" />
+    <Compile Include="SolutionDialog.xaml.cs">
+      <DependentUpon>SolutionDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XmlXamlReader.cs" />
+    <Page Include="AddDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AddDialog.xaml.cs">
+      <DependentUpon>AddDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Converters\TotalConverter.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MenuItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SolutionDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="res\add.png" />
+    <Resource Include="res\add8bits.png" />
+    <Resource Include="res\delete.png" />
+    <Resource Include="res\folder.png" />
+    <Resource Include="res\folder1.png" />
+    <Resource Include="res\help.png" />
+    <Resource Include="res\imageres178.png" />
+    <Resource Include="res\large-character-change-case_32x32.png" />
+    <Resource Include="res\large-close-window_32x32.png" />
+    <Resource Include="res\large-close_32x32.png" />
+    <Resource Include="res\large-document-add_32x32.png" />
+    <Resource Include="res\large-document-text-add_32x32.png" />
+    <Resource Include="res\large-exit_32x32.png" />
+    <Resource Include="res\large-filter_32x32.png" />
+    <Resource Include="res\large-find_32x32.png" />
+    <Resource Include="res\large-folder-add_32x32.png" />
+    <Resource Include="res\large-folder-open_32x32.png" />
+    <Resource Include="res\large-folder_32x32.png" />
+    <Resource Include="res\large-folder_48x48.png" />
+    <Resource Include="res\large-gear_32x32.png" />
+    <Resource Include="res\large-rename_32x32.png" />
+    <Resource Include="res\large-replace_32x32.png" />
+    <Resource Include="res\large-search_32x32.png" />
+    <Resource Include="res\large-select-all_16x16.png" />
+    <Resource Include="res\large-select-all_32x32.png" />
+    <Resource Include="res\large-select-all_48x48.png" />
+    <Resource Include="res\large-select-invert_16x16.png" />
+    <Resource Include="res\large-select-invert_32x32.png" />
+    <Resource Include="res\large-select-invert_48x48.png" />
+    <Resource Include="res\large-select-none_16x16.png" />
+    <Resource Include="res\large-select-none_32x32.png" />
+    <Resource Include="res\large-select-none_48x48.png" />
+    <Resource Include="res\large-symbol-add_32x32.png" />
+    <Resource Include="res\large-symbol-add_48x48.png" />
+    <Resource Include="res\large-symbol-cancel_32x32.png" />
+    <Resource Include="res\large-symbol-cancel_48x48.png" />
+    <Resource Include="res\large-symbol-remove_32x32.png" />
+    <Resource Include="res\large-symbol-remove_48x48.png" />
+    <Resource Include="res\redo.png" />
+    <Resource Include="res\selectAll.png" />
+    <Resource Include="res\selectInvert.png" />
+    <Resource Include="res\selectNone.png" />
+    <Resource Include="res\smal-button-on-off-2-circle_16x16.png" />
+    <Resource Include="res\smal-button-on-off-2-circle_32x32.png" />
+    <Resource Include="res\smal-button-on-off-2-circle_48x48.png" />
+    <Resource Include="res\smal-character-change-case_16x16.png" />
+    <Resource Include="res\smal-close-window_16x16.png" />
+    <Resource Include="res\smal-document-add_16x16.png" />
+    <Resource Include="res\smal-exit_16x16.png" />
+    <Resource Include="res\smal-filter_16x16.png" />
+    <Resource Include="res\smal-find_16x16.png" />
+    <Resource Include="res\smal-folder-add_16x16.png" />
+    <Resource Include="res\smal-folder-open_16x16.png" />
+    <Resource Include="res\smal-folder_16x16.png" />
+    <Resource Include="res\smal-gears_16x16.png" />
+    <Resource Include="res\smal-gear_16x16.png" />
+    <Resource Include="res\smal-list_16x16.png" />
+    <Resource Include="res\smal-rename_16x16.png" />
+    <Resource Include="res\smal-replace_16x16.png" />
+    <Resource Include="res\smal-search_16x16.png" />
+    <Resource Include="res\smal-select-all_16x16.png" />
+    <Resource Include="res\smal-select-invert_16x16.png" />
+    <Resource Include="res\smal-select-none_16x16.png" />
+    <Resource Include="res\smal-symbol-add_16x16.png" />
+    <Resource Include="res\smal-symbol-cancel_16x16.png" />
+    <Resource Include="res\smal-symbol-ok_16x16.png" />
+    <Resource Include="res\smal-symbol-refresh_16x16.png" />
+    <Resource Include="res\smal-symbol-remove_16x16.png" />
+    <Resource Include="res\symbol-add.png" />
+    <Resource Include="res\undo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
